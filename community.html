@@ -15,15 +15,40 @@
       margin-bottom: 0.25rem;
     }
     #india-map {
-      height: 480px;
+      height: 420px;
       border-radius: var(--radius);
       overflow: hidden;
       box-shadow: var(--shadow);
     }
     .leaflet-container { background: #EAF0F4; }
-    /* Mariapuram popup */
     .map-popup h4 { margin: 0 0 4px; color: #1E3A5F; font-family: Georgia, serif; font-size: 0.95rem; }
     .map-popup p  { margin: 0; font-size: 0.8rem; color: #555; }
+
+    .community-two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+      margin-top: 2.5rem;
+    }
+    .village-photo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+    @media (max-width: 768px) {
+      .community-two-col {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      #india-map { height: 320px; }
+      .village-photo-grid .photo-placeholder:first-child {
+        min-height: 180px !important;
+      }
+      .village-photo-grid .photo-placeholder:not(:first-child) {
+        min-height: 130px !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -69,7 +94,7 @@
     <p class="section-label">Where We Work</p>
     <h2 class="section-title">From Mariapuram to All of Telangana</h2>
 
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; margin-top: 2.5rem;">
+    <div class="community-two-col">
 
       <!-- MAP -->
       <div>
@@ -101,8 +126,8 @@
             <div style="font-size: 0.85rem; color: var(--text-light);">of children live in the area surrounding Mariapuram</div>
           </div>
           <div style="text-align: center; background: var(--cream-dark); border-radius: var(--radius); padding: 1.5rem;">
-            <div class="stat-highlight">225</div>
-            <div style="font-size: 0.85rem; color: var(--text-light);">children supported across Telangana state</div>
+            <div class="stat-highlight">225+</div>
+            <div style="font-size: 0.85rem; color: var(--text-light);">children in need of sponsorship across Telangana</div>
           </div>
         </div>
 
@@ -124,10 +149,10 @@
     <p class="section-label">The Village</p>
     <h2 class="section-title">Mariapuram</h2>
 
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; margin-top: 2.5rem;">
+    <div class="community-two-col">
 
       <!-- Photo grid -->
-      <div style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: 0.75rem;">
+      <div class="village-photo-grid">
         <div class="photo-placeholder" style="grid-column: 1 / -1; min-height: 220px; border-radius: var(--radius); font-size: 0.85rem;">
           <div>
             <div style="font-size: 2rem; margin-bottom: 0.4rem;">📸</div>
@@ -234,8 +259,8 @@
 
       <div class="mission-card">
         <div class="mission-icon">👥</div>
-        <h3>225 Children Today</h3>
-        <p>We currently support 225 children. The waitlist is growing. Each additional donor allows us to say "yes" to one more child who deserves a chance.</p>
+        <h3>225+ Children Waiting</h3>
+        <p>225+ children need a sponsor right now. The list is growing. Each new donor allows Fr. Joji to say "yes" to one more child who deserves a chance.</p>
       </div>
 
       <div class="mission-card">
@@ -269,8 +294,8 @@
               <div style="font-size: 0.8rem; color: rgba(255,255,255,0.65);">Population of Mariapuram</div>
             </div>
             <div>
-              <div style="font-family: Georgia; font-size: 2.2rem; color: var(--gold-light);">225</div>
-              <div style="font-size: 0.8rem; color: rgba(255,255,255,0.65);">Children currently sponsored</div>
+              <div style="font-family: Georgia; font-size: 2.2rem; color: var(--gold-light);">225+</div>
+              <div style="font-size: 0.8rem; color: rgba(255,255,255,0.65);">Children need sponsorship</div>
             </div>
             <div>
               <div style="font-family: Georgia; font-size: 2.2rem; color: var(--gold-light);">95%</div>
@@ -306,7 +331,7 @@
     <div class="footer-brand">
       <div class="placeholder-notice">Name Pending</div>
       <h3>[Organization Name]</h3>
-      <p>Supporting 225 children in Telangana, India. Zero administrative costs — 100% to the children.</p>
+      <p>225+ children in Telangana, India need sponsorship. Zero administrative costs — 100% to the children.</p>
     </div>
     <div class="footer-col">
       <h4>Navigate</h4>
