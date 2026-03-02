@@ -608,4 +608,5 @@ footer {
   .hero { min-height: 480px; }
   .section { padding: 3rem 0; }
   .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+  .stats-strip-wrap { margin-top: 0 !important; }
 }
