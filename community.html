@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Community — [Organization Name]</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <style>
+    .stat-highlight {
+      font-family: Georgia, serif;
+      font-size: 4rem;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+    #india-map {
+      height: 480px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .leaflet-container { background: #EAF0F4; }
+    /* Mariapuram popup */
+    .map-popup h4 { margin: 0 0 4px; color: #1E3A5F; font-family: Georgia, serif; font-size: 0.95rem; }
+    .map-popup p  { margin: 0; font-size: 0.8rem; color: #555; }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     NAVIGATION
+══════════════════════════════════════════ -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">✦ <span>[Organization Name]</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="children.html">Meet the Children</a></li>
+      <li><a href="community.html" class="active">Our Community</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="donate.html" class="nav-donate-btn">Donate</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════
+     PAGE HERO
+══════════════════════════════════════════ -->
+<section style="background: linear-gradient(135deg, #1A4A35 0%, #2D6A4F 50%, #1E5F6E 100%); padding: 4rem 0;">
+  <div class="container">
+    <p class="section-label" style="color: rgba(255,255,255,0.7);">Telangana, India</p>
+    <h1 style="color: var(--white); max-width: 680px;">Our Community</h1>
+    <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; max-width: 600px; margin-top: 1rem;">
+      Rooted in Mariapuram — reaching children across all of Telangana.
+      This is where Fr. Joji has devoted his ministry, and where your donation makes a difference.
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     MAP SECTION
+══════════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <p class="section-label">Where We Work</p>
+    <h2 class="section-title">From Mariapuram to All of Telangana</h2>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; margin-top: 2.5rem;">
+
+      <!-- MAP -->
+      <div>
+        <div id="india-map"></div>
+        <div class="map-legend" style="margin-top: 1rem;">
+          <div class="legend-item">
+            <div style="width:20px; height:12px; border-radius:3px; background:rgba(30,58,95,0.55); border:2px solid #1E3A5F; flex-shrink:0;"></div>
+            <span>Telangana State</span>
+          </div>
+          <div class="legend-item">
+            <div style="width:20px; height:12px; border-radius:3px; background:rgba(200,144,10,0.45); border:2px solid #C8900A; flex-shrink:0;"></div>
+            <span>Warangal Diocese</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot" style="background:#2D6A4F;"></div>
+            <span>Mariapuram</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Context text -->
+      <div>
+        <h3 style="font-size: 1.35rem; margin-bottom: 1rem;">A Community of 500 with a Mission for Thousands</h3>
+        <p>Mariapuram is a small village of approximately 500 people in Telangana, India — yet it is the beating heart of this mission. Fr. Joji has served here for [X] years, building deep relationships with families throughout the surrounding region.</p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2rem 0;">
+          <div style="text-align: center; background: var(--cream-dark); border-radius: var(--radius); padding: 1.5rem;">
+            <div class="stat-highlight">95%</div>
+            <div style="font-size: 0.85rem; color: var(--text-light);">of children live in the area surrounding Mariapuram</div>
+          </div>
+          <div style="text-align: center; background: var(--cream-dark); border-radius: var(--radius); padding: 1.5rem;">
+            <div class="stat-highlight">225</div>
+            <div style="font-size: 0.85rem; color: var(--text-light);">children supported across Telangana state</div>
+          </div>
+        </div>
+
+        <p>While most children we sponsor come from villages near Mariapuram, Fr. Joji's network extends throughout Telangana. Any child in demonstrated need within the state is considered for sponsorship.</p>
+
+        <p>The Warangal Diocese — the Catholic diocese encompassing this region — is home to many of the established boarding schools where our children attend. These schools have long histories of academic excellence and pastoral care.</p>
+
+        <a href="children.html" class="btn btn-outline" style="margin-top: 0.5rem;">Meet the Children →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     MARIAPURAM VILLAGE
+══════════════════════════════════════════ -->
+<section class="section section-alt">
+  <div class="container">
+    <p class="section-label">The Village</p>
+    <h2 class="section-title">Mariapuram</h2>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; margin-top: 2.5rem;">
+
+      <!-- Photo grid -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: 0.75rem;">
+        <div class="photo-placeholder" style="grid-column: 1 / -1; min-height: 220px; border-radius: var(--radius); font-size: 0.85rem;">
+          <div>
+            <div style="font-size: 2rem; margin-bottom: 0.4rem;">📸</div>
+            <strong>Village Photo</strong><br>
+            <span style="opacity:0.7;">Mariapuram main street or landscape</span>
+          </div>
+        </div>
+        <div class="photo-placeholder" style="min-height: 160px; border-radius: var(--radius); font-size: 0.8rem;">
+          <div>
+            <div style="font-size: 1.8rem; margin-bottom: 0.3rem;">📸</div>
+            <strong>Village Photo</strong><br>
+            <span style="opacity:0.7;">Local families</span>
+          </div>
+        </div>
+        <div class="photo-placeholder" style="min-height: 160px; border-radius: var(--radius); font-size: 0.8rem;">
+          <div>
+            <div style="font-size: 1.8rem; margin-bottom: 0.3rem;">📸</div>
+            <strong>Village Photo</strong><br>
+            <span style="opacity:0.7;">Church or school</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Village details -->
+      <div>
+        <h3 style="font-size: 1.2rem; margin-bottom: 1.25rem; color: var(--navy);">A Small Village with Deep Roots</h3>
+
+        <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+          <div style="display: flex; gap: 1rem;">
+            <div style="font-size: 1.4rem; flex-shrink: 0; margin-top: 0.1rem;">🏘️</div>
+            <div>
+              <strong style="display: block; color: var(--navy); margin-bottom: 0.2rem;">Population ~500</strong>
+              <span style="font-size: 0.9rem; color: var(--text-light);">Mariapuram is a small, close-knit village where nearly everyone knows one another. Most families have lived here for generations.</span>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 1rem;">
+            <div style="font-size: 1.4rem; flex-shrink: 0; margin-top: 0.1rem;">🌾</div>
+            <div>
+              <strong style="display: block; color: var(--navy); margin-bottom: 0.2rem;">Agricultural Community</strong>
+              <span style="font-size: 0.9rem; color: var(--text-light);">Most families depend on seasonal agricultural labor — rice, cotton, and sugarcane farming — earning less than $2 a day during growing seasons.</span>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 1rem;">
+            <div style="font-size: 1.4rem; flex-shrink: 0; margin-top: 0.1rem;">⛪</div>
+            <div>
+              <strong style="display: block; color: var(--navy); margin-bottom: 0.2rem;">Catholic Parish at its Heart</strong>
+              <span style="font-size: 0.9rem; color: var(--text-light);">The village is centered around its Catholic parish, which Fr. Joji has served for [X] years. The church is a gathering place for the broader community.</span>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 1rem;">
+            <div style="font-size: 1.4rem; flex-shrink: 0; margin-top: 0.1rem;">🎓</div>
+            <div>
+              <strong style="display: block; color: var(--navy); margin-bottom: 0.2rem;">No Local Secondary School</strong>
+              <span style="font-size: 0.9rem; color: var(--text-light);">There is no quality secondary school within reach of Mariapuram. Without boarding school sponsorship, children's education ends early — not by choice, but by circumstance.</span>
+            </div>
+          </div>
+        </div>
+
+        <blockquote style="margin: 1.75rem 0 0; border-left: 3px solid var(--gold); padding-left: 1.25rem; font-style: italic; color: var(--text-light); font-size: 0.95rem;">
+          "These families have so little — but their desire for their children to have a better life is immense. That is what drives everything we do."
+          <cite style="display: block; font-style: normal; font-size: 0.82rem; color: var(--text-light); margin-top: 0.5rem;">— Fr. Joji [placeholder quote]</cite>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     MISSION DETAILS
+══════════════════════════════════════════ -->
+<section class="section section-alt" style="padding-top: 0;">
+  <div class="container">
+    <p class="section-label">How We Work</p>
+    <h2 class="section-title">Our Mission in Detail</h2>
+    <p class="section-subtitle">We exist for one purpose: to ensure that no child in Telangana is denied an education simply because their family cannot pay for it.</p>
+
+    <div class="mission-cards">
+      <div class="mission-card">
+        <div class="mission-icon">🔍</div>
+        <h3>We Verify Every Child</h3>
+        <p>Fr. Joji personally visits each family to confirm genuine financial need. No child is added to the program without this verification. No exceptions.</p>
+      </div>
+
+      <div class="mission-card">
+        <div class="mission-icon">💯</div>
+        <h3>Zero Admin Costs</h3>
+        <p>There are no salaried staff, no office, and no overhead. Fr. Joji manages everything personally. 100% of every donation reaches a child.</p>
+      </div>
+
+      <div class="mission-card">
+        <div class="mission-icon">💰</div>
+        <h3>$40 / Month Per Child</h3>
+        <p>This single monthly donation covers a child's full boarding school costs: accommodations, three daily meals, all textbooks, and school supplies.</p>
+      </div>
+
+      <div class="mission-card">
+        <div class="mission-icon">⛪</div>
+        <h3>95% Catholic Schools</h3>
+        <p>The Warangal Diocese's Catholic boarding schools are known for quality education and values-based formation. Most of our children attend these schools.</p>
+      </div>
+
+      <div class="mission-card">
+        <div class="mission-icon">👥</div>
+        <h3>225 Children Today</h3>
+        <p>We currently support 225 children. The waitlist is growing. Each additional donor allows us to say "yes" to one more child who deserves a chance.</p>
+      </div>
+
+      <div class="mission-card">
+        <div class="mission-icon">🏫</div>
+        <h3>Boarding School Access</h3>
+        <p>Many children live in remote villages without nearby quality schools. Boarding school is the only viable path — and your donation makes it possible.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     TELANGANA CONTEXT
+══════════════════════════════════════════ -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <p class="section-label" style="color: var(--gold-light);">Context</p>
+        <h2 class="section-title">Why Telangana? Why Now?</h2>
+        <p style="color: rgba(255,255,255,0.85);">Telangana is one of India's newer states, carved out of Andhra Pradesh in 2014. Despite significant urban growth in its capital, Hyderabad, rural areas — especially tribal regions — continue to face deep poverty and limited educational access.</p>
+        <p style="color: rgba(255,255,255,0.85);">In villages surrounding Mariapuram, many families earn less than $2 a day through agricultural labor. The cost of boarding school — which includes meals, books, and supervision — is simply beyond reach without outside support.</p>
+        <p style="color: rgba(255,255,255,0.85);">Fr. Joji has spent [X] years building the relationships and trust necessary to identify the most vulnerable children and connect them with life-changing educational opportunities.</p>
+      </div>
+      <div>
+        <div style="background: rgba(255,255,255,0.08); border-radius: var(--radius); padding: 2rem;">
+          <h3 style="color: var(--gold-light); margin-bottom: 1.5rem; font-size: 1rem;">By the Numbers</h3>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+            <div>
+              <div style="font-family: Georgia; font-size: 2.2rem; color: var(--gold-light);">~500</div>
+              <div style="font-size: 0.8rem; color: rgba(255,255,255,0.65);">Population of Mariapuram</div>
+            </div>
+            <div>
+              <div style="font-family: Georgia; font-size: 2.2rem; color: var(--gold-light);">225</div>
+              <div style="font-size: 0.8rem; color: rgba(255,255,255,0.65);">Children currently sponsored</div>
+            </div>
+            <div>
+              <div style="font-family: Georgia; font-size: 2.2rem; color: var(--gold-light);">95%</div>
+              <div style="font-size: 0.8rem; color: rgba(255,255,255,0.65);">Attend Catholic boarding schools</div>
+            </div>
+            <div>
+              <div style="font-family: Georgia; font-size: 2.2rem; color: var(--gold-light);">$0</div>
+              <div style="font-size: 0.8rem; color: rgba(255,255,255,0.65);">Administrative overhead</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     CTA BANNER
+══════════════════════════════════════════ -->
+<section class="cta-banner">
+  <div class="container">
+    <h2>Be Part of This Community</h2>
+    <p>From Chicago to Mariapuram — your $40 a month connects two worlds and transforms one child's future.</p>
+    <a href="donate.html" class="btn" style="background:var(--white); color:var(--gold); font-weight:700; font-size:1.05rem; padding: 0.85rem 2.25rem;">Donate Now</a>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="placeholder-notice">Name Pending</div>
+      <h3>[Organization Name]</h3>
+      <p>Supporting 225 children in Telangana, India. Zero administrative costs — 100% to the children.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="children.html">Meet the Children</a></li>
+        <li><a href="community.html">Our Community</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="#">Fr. Joji — [email placeholder]</a></li>
+        <li><a href="#">Joey B. — [email placeholder]</a></li>
+        <li><a href="#">Mariapuram, Telangana, India</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 [Organization Name]. All rights reserved.</span>
+    <span style="color: rgba(255,255,255,0.4);">Website prototype — placeholder content throughout</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/geodata.js?v=5"></script>
+<script>
+(function () {
+  const map = L.map('india-map', {
+    center: [18.0, 79.5],
+    zoom: 6,
+    scrollWheelZoom: false,
+    zoomControl: true
+  });
+
+  // Clean light tile layer (CartoDB Positron)
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://openstreetmap.org">OpenStreetMap</a> &copy; <a href="https://carto.com">CARTO</a>',
+    subdomains: 'abcd',
+    maxZoom: 19
+  }).addTo(map);
+
+  // Telangana — light navy fill, fit map to its bounds
+  const tgLayer = L.geoJSON(GEO.telangana, {
+    style: {
+      fillColor: '#1E3A5F',
+      fillOpacity: 0.2,
+      color: '#1E3A5F',
+      weight: 2
+    }
+  }).addTo(map);
+
+  // Fit the map to show all of Telangana
+  map.fitBounds(tgLayer.getBounds(), { padding: [20, 20] });
+
+  // Warangal — solid gold fill
+  L.geoJSON(GEO.warangal, {
+    style: {
+      fillColor: '#C8900A',
+      fillOpacity: 0.75,
+      color: '#A07008',
+      weight: 2
+    }
+  }).addTo(map);
+
+  // Mariapuram — green dot marker
+  // NOTE: coordinates are approximate — update once confirmed by Fr. Joji
+  L.circleMarker([17.5, 79.9], {
+    radius: 8,
+    fillColor: '#2D6A4F',
+    fillOpacity: 1,
+    color: '#ffffff',
+    weight: 2.5
+  }).addTo(map)
+    .bindPopup('<div class="map-popup"><h4>Mariapuram</h4><p>~500 people · Heart of the mission</p></div>');
+})();
+</script>
+</body>
+</html>

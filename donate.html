@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate — [Organization Name]</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     NAVIGATION
+══════════════════════════════════════════ -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">✦ <span>[Organization Name]</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="children.html">Meet the Children</a></li>
+      <li><a href="community.html">Our Community</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="donate.html" class="nav-donate-btn active">Donate</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════
+     PAGE HERO
+══════════════════════════════════════════ -->
+<section style="background: linear-gradient(135deg, #2D6A4F 0%, #1A4A35 100%); padding: 3.5rem 0;">
+  <div class="container">
+    <p class="section-label" style="color: rgba(255,255,255,0.7);">Make a Difference</p>
+    <h1 style="color: var(--white); max-width: 680px;">Sponsor a Child's Education</h1>
+    <p style="color: rgba(255,255,255,0.8); font-size: 1.05rem; max-width: 560px; margin-top: 0.75rem;">
+      $40 a month. That's it. 100% reaches a child in Telangana, India — covering boarding,
+      meals, books, and school supplies for an entire month.
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     DONATION FORM
+══════════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="donate-layout">
+
+      <!-- LEFT: Impact info -->
+      <div>
+        <p class="section-label">Your Impact</p>
+        <h2 class="section-title">Where Your Money Goes</h2>
+
+        <div style="margin: 2rem 0;">
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem;">
+            <div style="background: var(--gold); color: white; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0;">🍽️</div>
+            <div>
+              <strong style="display: block; color: var(--navy);">Meals</strong>
+              <span style="font-size: 0.87rem; color: var(--text-light);">Three nutritious meals every day, seven days a week. No child goes to bed hungry.</span>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem;">
+            <div style="background: var(--navy); color: white; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0;">📚</div>
+            <div>
+              <strong style="display: block; color: var(--navy);">Books & Materials</strong>
+              <span style="font-size: 0.87rem; color: var(--text-light);">All textbooks, notebooks, pens, uniforms, and school supplies for the full academic year.</span>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem;">
+            <div style="background: var(--green); color: white; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0;">🏠</div>
+            <div>
+              <strong style="display: block; color: var(--navy);">Safe Boarding</strong>
+              <span style="font-size: 0.87rem; color: var(--text-light);">A safe, supervised dormitory so children from remote villages can access quality schools.</span>
+            </div>
+          </div>
+        </div>
+
+        <h3 style="font-size: 1rem; margin-bottom: 1rem; color: var(--navy);">Our Promise to You</h3>
+        <ul class="trust-list">
+          <li>
+            <span class="trust-check">✓</span>
+            <span><strong>0% administrative costs</strong> — every dollar goes to the children</span>
+          </li>
+          <li>
+            <span class="trust-check">✓</span>
+            <span><strong>Verified need</strong> — Fr. Joji personally meets every family before acceptance</span>
+          </li>
+          <li>
+            <span class="trust-check">✓</span>
+            <span><strong>Established schools</strong> — partnered with Catholic boarding schools in the Warangal Diocese</span>
+          </li>
+          <li>
+            <span class="trust-check">✓</span>
+            <span><strong>Transparent reporting</strong> — periodic updates on children's progress</span>
+          </li>
+          <li>
+            <span class="trust-check">✓</span>
+            <span><strong>Cancel anytime</strong> — no contracts, no commitments</span>
+          </li>
+        </ul>
+
+        <div style="background: var(--cream-dark); border-radius: var(--radius); padding: 1.5rem; margin-top: 2rem;">
+          <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-light); margin-bottom: 0.75rem;">Your Donation in Context</div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div style="text-align: center; padding: 1rem; background: var(--white); border-radius: 8px;">
+              <div style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--gold);">$40</div>
+              <div style="font-size: 0.78rem; color: var(--text-light);">= 1 child, 1 month</div>
+            </div>
+            <div style="text-align: center; padding: 1rem; background: var(--white); border-radius: 8px;">
+              <div style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--navy);">$480</div>
+              <div style="font-size: 0.78rem; color: var(--text-light);">= 1 child, full year</div>
+            </div>
+            <div style="text-align: center; padding: 1rem; background: var(--white); border-radius: 8px;">
+              <div style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--green);">$1.33</div>
+              <div style="font-size: 0.78rem; color: var(--text-light);">per day</div>
+            </div>
+            <div style="text-align: center; padding: 1rem; background: var(--white); border-radius: 8px;">
+              <div style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--navy);">225</div>
+              <div style="font-size: 0.78rem; color: var(--text-light);">children supported</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Donation form -->
+      <div>
+        <div class="donate-card">
+          <!-- Stripe placeholder notice -->
+          <!-- TODO: Replace this form with Stripe Checkout or Payment Elements once Stripe account is set up -->
+          <div class="placeholder-notice" style="margin-bottom: 1rem;">Payment Form — Stripe Integration Pending</div>
+
+          <h3 style="font-size: 1.2rem; margin-bottom: 1.25rem; color: var(--navy);">Make a Donation</h3>
+
+          <!-- Recurring / One-time toggle -->
+          <div class="toggle-row">
+            <button class="toggle-btn active" type="button">Monthly (Recommended)</button>
+            <button class="toggle-btn" type="button">One-Time</button>
+          </div>
+
+          <!-- Amount selector -->
+          <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-light); margin-bottom: 0.75rem;">Select Amount</div>
+          <div class="amount-grid">
+            <div class="amount-btn selected">
+              <strong>$40</strong>
+              <small>1 child</small>
+            </div>
+            <div class="amount-btn">
+              <strong>$80</strong>
+              <small>2 children</small>
+            </div>
+            <div class="amount-btn">
+              <strong>$120</strong>
+              <small>3 children</small>
+            </div>
+            <div class="amount-btn">
+              <strong>Other</strong>
+              <small>Custom</small>
+            </div>
+          </div>
+
+          <form id="donateForm">
+            <!-- Personal info -->
+            <div class="form-group">
+              <label class="form-label" for="donorName">Full Name</label>
+              <input class="form-input" type="text" id="donorName" placeholder="Jane Smith" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="donorEmail">Email Address</label>
+              <input class="form-input" type="email" id="donorEmail" placeholder="jane@example.com" required>
+            </div>
+
+            <!-- Card info (visual mockup) -->
+            <div style="background: #F7F7F9; border: 1.5px solid #E4E4E7; border-radius: 8px; padding: 1.25rem; margin-bottom: 1.25rem;">
+              <div style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-light); margin-bottom: 0.75rem;">Card Information</div>
+              <div class="form-group" style="margin-bottom: 0.75rem;">
+                <input class="form-input" type="text" placeholder="1234  5678  9012  3456" style="font-family: monospace; letter-spacing: 0.05em;">
+              </div>
+              <div class="card-row">
+                <div class="form-group" style="margin-bottom: 0;">
+                  <input class="form-input" type="text" placeholder="MM / YY">
+                </div>
+                <div class="form-group" style="margin-bottom: 0;">
+                  <input class="form-input" type="text" placeholder="CVC">
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1rem; padding: 0.9rem;">
+              Donate $40 / Month
+            </button>
+
+            <div class="stripe-notice">
+              <span class="stripe-badge">stripe</span>
+              <span>Secure payment powered by Stripe. Your card info is never stored on our servers.</span>
+            </div>
+          </form>
+
+          <div style="margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid var(--cream-dark); font-size: 0.8rem; color: var(--text-light); text-align: center;">
+            Questions? Contact Fr. Joji at <a href="#" style="color: var(--gold);">[email placeholder]</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FAQ
+══════════════════════════════════════════ -->
+<section class="section section-alt">
+  <div class="container">
+    <p class="section-label">Common Questions</p>
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div style="max-width: 720px; margin-top: 2rem;">
+
+      <div style="border-bottom: 1px solid var(--cream-dark); padding: 1.5rem 0;">
+        <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Does 100% really go to the children?</h3>
+        <p style="font-size: 0.9rem; color: var(--text-light); margin: 0;">Yes. Fr. Joji personally manages all operations and receives no compensation. There are no paid staff, no office rent, and no overhead. Every dollar is sent directly to boarding schools to cover a child's costs.</p>
+      </div>
+
+      <div style="border-bottom: 1px solid var(--cream-dark); padding: 1.5rem 0;">
+        <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">How are children selected?</h3>
+        <p style="font-size: 0.9rem; color: var(--text-light); margin: 0;">Fr. Joji visits families personally before accepting any child into the program. He verifies financial need, assesses the child's desire to learn, and ensures there is no other means for the family to afford education.</p>
+      </div>
+
+      <div style="border-bottom: 1px solid var(--cream-dark); padding: 1.5rem 0;">
+        <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Can I sponsor a specific child?</h3>
+        <p style="font-size: 0.9rem; color: var(--text-light); margin: 0;">At this time, donations support the children collectively. Fr. Joji allocates funds based on each child's needs. We hope to offer direct child-to-sponsor matching as the program grows.</p>
+      </div>
+
+      <div style="border-bottom: 1px solid var(--cream-dark); padding: 1.5rem 0;">
+        <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Can I cancel at any time?</h3>
+        <p style="font-size: 0.9rem; color: var(--text-light); margin: 0;">Absolutely. Monthly donations can be cancelled at any time through your Stripe account or by contacting us. We never lock donors in — your support is always voluntary.</p>
+      </div>
+
+      <div style="padding: 1.5rem 0;">
+        <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Are donations tax-deductible?</h3>
+        <p style="font-size: 0.9rem; color: var(--text-light); margin: 0;">[Placeholder — to be confirmed once the organization's charitable status is established. Fr. Joji to provide details.]</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="placeholder-notice">Name Pending</div>
+      <h3>[Organization Name]</h3>
+      <p>Supporting 225 children in Telangana, India. Zero administrative costs — 100% to the children.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="children.html">Meet the Children</a></li>
+        <li><a href="community.html">Our Community</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="#">Fr. Joji — [email placeholder]</a></li>
+        <li><a href="#">Joey B. — [email placeholder]</a></li>
+        <li><a href="#">Mariapuram, Telangana, India</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 [Organization Name]. All rights reserved.</span>
+    <span style="color: rgba(255,255,255,0.4);">Website prototype — placeholder content throughout</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
